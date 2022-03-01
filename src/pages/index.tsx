@@ -1,13 +1,11 @@
-import Navbar from "./components/Navbar";
+import Layout from "./components/template/Layout";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
-      <Navbar />
-      <div className="bg-slate-700 text-blue-200 bg-blend-normal">
-        <small>Hey guys this is my portfolio!</small>
-      </div>
+      <Layout title={props.title} description={props.description}>
+        {props.children}
+      </Layout>  
     </>
-    
   )
 }
